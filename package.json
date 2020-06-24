@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon --watch Backend --exec babel-node Backend/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
