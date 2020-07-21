@@ -3,9 +3,23 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import CartScreen from './screens/CartScreen';
+import SigninScreen from './screens/SigninScreen';
+import { useSelector } from 'react-redux';
+import RegisterScreen from './screens/RegisterScreen';
+import ProductsScreen from './screens/ProductsScreen';
+import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrdersScreen from './screens/OrdersScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 
 function App() {
+
+    const userSignin = useSelector(state => state.userSignin);
+    const {userInfo} = userSignin;
+
   return (
   <BrowserRouter>
     <div className="grid-container">
@@ -14,11 +28,16 @@ function App() {
                 <button id="buttom">
                     &#9776;
                 </button>
+                
                 <Link to="/">Shopliest</Link>
             </div>
             <div className="header-links">
-                <a href="cart.html">Shoping Cart</a>
-                <a href="signing.html">Sing In</a>
+                <Link to="/cart/">Cart</Link> 
+                {
+                    userInfo ? <Link to="/profile"> {userInfo.name} </Link>:
+                    <Link to="/signin">Sign In</Link>
+                }
+               
             </div>
         </header>
         <aside className="sidebar">
@@ -35,10 +54,17 @@ function App() {
         </aside>
         <main className="main">
             <div className="content">
-                
-              <Route path="/" exact={true} component= {HomeScreen} />  
-              <Route path="/products/:id" component= {ProductScreen} />                          
-
+                <Route path="/profile" component={ProfileScreen} />
+                <Route path="/orders" component={OrdersScreen} />
+                <Route path="/payment" component={PaymentScreen} />
+                <Route path="/shipping" component={ShippingScreen} />
+                <Route path="/placeorder" component={PlaceOrderScreen} />
+                <Route path="/products" component={ProductsScreen} />
+                <Route path="/signin" component={SigninScreen} />
+                <Route path="/register" component= {RegisterScreen} />                
+                <Route path="/cart/:id?" component={CartScreen} />
+                <Route path="/product/:id" component= {ProductScreen} />                        
+                <Route path="/" exact={true} component= {HomeScreen} /> 
             </div>
         </main>
         <footer className="footer">

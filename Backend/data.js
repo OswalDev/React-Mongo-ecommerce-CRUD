@@ -6,7 +6,7 @@ export default{
         category:'Short',
         image: '/images/maleshirt.jpg',
         price: "25",
-        countInStock:"3"
+        qtyPerTime:4
     },
     {   
         _id:'2',
@@ -14,7 +14,7 @@ export default{
         category:'Short',
         image: '/images/maleshirt.jpg',
         price: "25",
-        countInStock:"3"
+        qtyPerTime:1
         },
     {
         _id:'3',
@@ -22,7 +22,7 @@ export default{
         category:'Short',
         image: '/images/maleshirt.jpg',
         price: "25",
-        countInStock:"3"
+        qtyPerTime:1
     },
     {
         _id:'4',
@@ -30,7 +30,7 @@ export default{
         category:'Short',
         image: '/images/maleshirt.jpg',
         price: "25",
-        countInStock:"3"
+        qtyPerTime:1
     },
     {
         _id:'5',
@@ -38,28 +38,31 @@ export default{
         category:'Short',
         image: '/images/maleshirt.jpg',
         price: "10",
-        countInStock:"3"
+        qtyPerTime:1
     },
     {
         _id:'6',
         name: 'Male Short',
         category:'Short',
         image: '/images/maleshirt.jpg',
-        price: "25"
+        price: "25",
+        qtyPerTime:1
         },
     {
         _id:'7',
         name: 'Female Short',
         category:'Short',
         image: '/images/maleshirt.jpg',
-        price: "5"
+        price: "5",
+        qtyPerTime:1
     },
     {
         _id:'8',
         name: 'Kid Short',
         category:'Short',
         image: '/images/maleshirt.jpg',
-        price: "8"
+        price: "8",
+        qtyPerTime:1
     },
 ]
 }
